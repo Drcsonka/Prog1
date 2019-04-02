@@ -43,3 +43,28 @@ int main(int argc, char *argv[])
 */
     return a.exec();
 }
+
+/*
+//A terminálban leadott parancsok:
+$ sudo apt-get install libqt5-dev 
+$ cd nagyitocpp/
+$ ls
+frakablak.cpp  frakablak.h  frakszal.cpp  frakszal.h  main.cpp
+$ qmake -project
+$ ls
+frakablak.cpp  frakablak.h  frakszal.cpp  frakszal.h  main.cpp  nagyitocpp.pro
+$ qmake nagyitocpp.pro
+$ ls
+frakablak.cpp  frakszal.cpp  main.cpp  nagyitocpp.pro
+frakablak.h    frakszal.h    Makefile
+$ make
+g++ -c -m64 -pipe -O2 -Wall -W -D_REENTRANT -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++-64 -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I. -I. -o frakablak.o frakablak.cpp
+g++ -c -m64 -pipe -O2 -Wall -W -D_REENTRANT -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++-64 -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I. -I. -o frakszal.o frakszal.cpp
+g++ -c -m64 -pipe -O2 -Wall -W -D_REENTRANT -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++-64 -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I. -I. -o main.o main.cpp
+/usr/lib/x86_64-linux-gnu/qt4/bin/moc -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++-64 -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I. -I. frakablak.h -o moc_frakablak.cpp
+g++ -c -m64 -pipe -O2 -Wall -W -D_REENTRANT -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++-64 -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I. -I. -o moc_frakablak.o moc_frakablak.cpp
+/usr/lib/x86_64-linux-gnu/qt4/bin/moc -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++-64 -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I. -I. frakszal.h -o moc_frakszal.cpp
+g++ -c -m64 -pipe -O2 -Wall -W -D_REENTRANT -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++-64 -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I. -I. -o moc_frakszal.o moc_frakszal.cpp
+g++ -m64 -Wl,-O1 -o nagyitocpp frakablak.o frakszal.o main.o moc_frakablak.o moc_frakszal.o    -L/usr/lib/x86_64-linux-gnu -lQtGui -lQtCore -lpthread 
+$ ./nagyitocpp]]>
+*/

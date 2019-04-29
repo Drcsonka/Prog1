@@ -2,11 +2,11 @@
 /*
 {
 #include <string.h>
-int szamok_szama = 0;
+int db = 0;
 %}
 %%
 
-[0-9]+		++szamok_szama;
+[0-9]+		++db;
 [a-zA-Z][a-zA-Z0-9]*	;                          
 			
 %%
@@ -14,7 +14,7 @@ int
 main()
 {
 yylex();
-printf("%d szam\n", szamok_szama);
+printf("%d szam\n", db);
 return 0;
 }]]>
 */
@@ -476,7 +476,7 @@ char *yytext;
 #line 1 "szamokszama.l"
 #line 2 "szamokszama.l"
 	#include <string.h>
-	int szamok_szama = 0;
+	int db = 0;
 #line 449 "szamokszama.c"
 #line 450 "szamokszama.c"
 
@@ -758,7 +758,7 @@ do_action:	/* This label is used only to access EOF actions. */
 case 1:
 YY_RULE_SETUP
 #line 7 "szamokszama.l"
-++szamok_szama;
+++db;
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
@@ -1781,7 +1781,7 @@ int
 main()
 {
 yylex();
-printf("%d szam\n", szamok_szama);
+printf("%d szam\n", db);
 return 0;
 }
  

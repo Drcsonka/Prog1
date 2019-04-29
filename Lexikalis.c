@@ -19,9 +19,9 @@ return 0;
 }]]>
 */
 
-// lex -o szamokszama.c szamokszama.l
-// gcc szamokszama.c -o szamokszama -lfl
-// ./szamokszama]]>
+// lex -o Lexikalis.c Lexikalis.l
+// gcc Lexikalis.c -o Lexikalis -lfl
+// ./Lexikalis]]>
 
 
 
